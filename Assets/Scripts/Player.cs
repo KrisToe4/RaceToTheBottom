@@ -26,7 +26,6 @@ public class Player : MonoBehaviour {
     private bool m_holdPosition = false;
 
     private bool m_enableBackup = true;
-    private Quaternion m_lastRotation = Quaternion.identity;
 
     void Start()
     {
