@@ -6,8 +6,11 @@ using Pathfinding;
 public class EnemyController : MonoBehaviour
 {
     public float speed = 2;
+    public float rotationSpeed = 360;
 
     public float attackThreshold = 0.5f;
+    public float attackRate = 2;
+    private float lastAttack = -9999;
     private bool m_attacking = false;
 
     private Animator m_animator;
@@ -57,7 +60,7 @@ public class EnemyController : MonoBehaviour
 
         if (m_attacking)
         {
-            m_animator.SetBool("walking", false);
+            AttackTarget();
         }
         else
         {
@@ -92,15 +95,11 @@ public class EnemyController : MonoBehaviour
             return;
         }
 
-        // Check if we should be attacking or moving towards our target
+        // Calculate our movement vector
         Vector2 moveVector = (m_path.vectorPath[m_currentWaypoint] - transform.position).normalized;
         if (moveVector != Vector2.zero)
         { 
             m_animator.SetBool("walking", true);
-
-            // *Note: We're multiplying by -1 for X to get the rotation happening in the right direction
-            float angle = Mathf.Atan2(moveVector.x * -1, moveVector.y) * Mathf.Rad2Deg;
-            transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
 
             Vector3 positionChange = moveVector * speed * Time.deltaTime;
             transform.position += positionChange;
@@ -109,6 +108,24 @@ public class EnemyController : MonoBehaviour
         {
             m_animator.SetBool("walking", false);
         }
+
+        // Rotate if needed to face target
+        Vector2 rotationVector = (m_target.transform.position - transform.position).normalized;
+        if (rotationVector != Vector2.zero)
+        {
+            float startAngle = transform.eulerAngles.z;
+
+            // *Note: We're multiplying by -1 for X to get the rotation happening in the right direction
+            float targetAngle = (Mathf.Atan2(rotationVector.x * -1, rotationVector.y) * Mathf.Rad2Deg);
+            if (targetAngle < 0)
+            {
+                targetAngle = 360 + targetAngle;
+            }
+
+            float rotationAngle = Mathf.MoveTowardsAngle(startAngle, targetAngle, rotationSpeed);
+            transform.eulerAngles = new Vector3(0, 0, rotationAngle);
+        }
+
 
         // The commented line is equivalent to the one below, but the one that is used
         // is slightly faster since it does not have to calculate a square root
@@ -121,7 +138,14 @@ public class EnemyController : MonoBehaviour
 
     void AttackTarget()
     {
+        m_animator.SetBool("walking", false);
 
+        if (Time.time - lastAttack > attackRate)
+        {
+            lastAttack = Time.time + Random.value * attackRate;
+
+            Debug.Log("Attacking Target");
+        }
     }
 
     void OnPathComplete(Path p)
