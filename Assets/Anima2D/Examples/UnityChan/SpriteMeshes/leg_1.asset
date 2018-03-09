@@ -1,34 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!21 &2113466
-Material:
-  serializedVersion: 6
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_Name: leg_1_0
-  m_Shader: {fileID: 10753, guid: 0000000000000000f000000000000000, type: 0}
-  m_ShaderKeywords: 
-  m_LightmapFlags: 5
-  m_CustomRenderQueue: -1
-  stringTagMap: {}
-  m_SavedProperties:
-    serializedVersion: 2
-    m_TexEnvs:
-    - first:
-        name: _MainTex
-      second:
-        m_Texture: {fileID: 2800000, guid: dd105a39e474c4706aba36b8be4febd9, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    m_Floats:
-    - first:
-        name: PixelSnap
-      second: 0
-    m_Colors:
-    - first:
-        name: _Color
-      second: {r: 1, g: 1, b: 1, a: 1}
 --- !u!43 &4365432
 Mesh:
   m_ObjectHideFlags: 1
@@ -41,6 +12,7 @@ Mesh:
     firstByte: 0
     indexCount: 111
     topology: 0
+    baseVertex: 0
     firstVertex: 0
     vertexCount: 39
     localAABB:
@@ -106,6 +78,7 @@ Mesh:
   m_IsReadable: 1
   m_KeepVertices: 1
   m_KeepIndices: 1
+  m_IndexFormat: 0
   m_IndexBuffer: 21001f001e0020001f0021001d001c001e0021001e0022001c0022001e0022001c001a001c001b001a001a00190022002600220019002600180000001800260019001600000017001800170000001600250000001600010025000100160015001500140001001400020001001400130002000200130003001300120003000300120011000400030011000500110024000500040011002300070024000700060024000600050024002300100009000b0010000f000e000d000f000f000d000c000c000b000f0009000b000a00230009000700090008000700090010000b00
   m_Skin:
   - weight[0]: 0.95869803
@@ -528,17 +501,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c10c0be6d28fe4d539c4a39822fe301c, type: 3}
   m_Name: leg_1
   m_EditorClassIdentifier: 
-  m_ApiVersion: 3
+  m_ApiVersion: 4
   m_Sprite: {fileID: 21300022, guid: dd105a39e474c4706aba36b8be4febd9, type: 3}
   m_SharedMesh: {fileID: 4365432}
-  m_SharedMaterials:
-  - {fileID: 2113466}
   pivotPoint: {x: 0, y: 0}
   texVertices: []
   edges: []
   holes: []
   indices: 
   bindPoses: []
+  m_SharedMaterials: []
 --- !u!114 &11465716
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -988,79 +960,68 @@ MonoBehaviour:
   m_BindPoses:
   - bindPose:
       e00: -0.124874905
-      e01: 0.9921726
+      e01: -0.9921726
       e02: 0
-      e03: 0
-      e10: -0.9921726
+      e03: 0.07302855
+      e10: 0.9921726
       e11: -0.124874905
       e12: 0
-      e13: 0
+      e13: -0.05276151
       e20: 0
       e21: 0
       e22: 1
       e23: 0
-      e30: 0.07302855
-      e31: -0.05276151
+      e30: 0
+      e31: 0
       e32: 0
       e33: 1
     boneLength: 1.6105696
-    path: 5269676874204c6567
-    name: 5269676874204c6567
-    color:
-      r: 1
-      g: 0
-      b: 0
-      a: 1
+    path: Right Leg
+    name: Right Leg
+    color: {r: 1, g: 0, b: 0, a: 1}
     zOrder: 3
   - bindPose:
       e00: -0.21629465
-      e01: 0.97632825
+      e01: -0.97632825
       e02: 0
-      e03: 0
-      e10: -0.97632825
+      e03: -1.5260327
+      e10: 0.97632825
       e11: -0.21629465
       e12: 0
-      e13: 0
+      e13: -0.19503777
       e20: 0
       e21: 0
       e22: 1
       e23: 0
-      e30: -1.5260327
-      e31: -0.19503777
+      e30: 0
+      e31: 0
       e32: 0
       e33: 1
     boneLength: 1.1027093
-    path: 5269676874204c65672f52696768742043616c66
-    name: 52696768742043616c66
-    color:
-      r: 1
-      g: 0.75
-      b: 0
-      a: 1
+    path: Right Leg/Right Calf
+    name: Right Calf
+    color: {r: 1, g: 0.75, b: 0, a: 1}
     zOrder: 2
   - bindPose:
       e00: 0.55747837
-      e01: 0.8301916
+      e01: -0.8301916
       e02: 0
-      e03: 0
-      e10: -0.8301916
+      e03: -1.9549037
+      e10: 0.8301916
       e11: 0.55747837
       e12: 0
-      e13: 0
+      e13: 1.7682405
       e20: 0
       e21: 0
       e22: 1
       e23: 0
-      e30: -1.9549037
-      e31: 1.7682405
+      e30: 0
+      e31: 0
       e32: 0
       e33: 1
     boneLength: 0.28
-    path: 5269676874204c65672f52696768742043616c662f526967687420466f6f74
-    name: 526967687420466f6f74
-    color:
-      r: 0.5
-      g: 1
-      b: 0
-      a: 1
+    path: Right Leg/Right Calf/Right Foot
+    name: Right Foot
+    color: {r: 0.5, g: 1, b: 0, a: 1}
     zOrder: 1
+  m_Blendshapes: []

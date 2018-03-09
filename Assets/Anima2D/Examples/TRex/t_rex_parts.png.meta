@@ -9,12 +9,12 @@ TextureImporter:
     21300004: t_rex_head
     21300006: t_rex_jaw_open_back
     21300008: t_rex_jaw_open
-  serializedVersion: 4
+  serializedVersion: 2
   mipmaps:
     mipMapMode: 0
     enableMipMap: 1
-    sRGBTexture: 1
     linearTexture: 0
+    correctGamma: 0
     fadeOut: 0
     borderMipMap: 0
     mipMapFadeDistanceStart: 1
@@ -22,12 +22,14 @@ TextureImporter:
   bumpmap:
     convertToNormalMap: 0
     externalNormalMap: 0
-    heightScale: 0.25
+    heightScale: .25
     normalMapFilter: 0
   isReadable: 0
   grayScaleToAlpha: 0
-  generateCubemap: 6
+  generateCubemap: 0
   cubemapConvolution: 0
+  cubemapConvolutionSteps: 8
+  cubemapConvolutionExponent: 1.5
   seamlessCubemap: 0
   textureFormat: -3
   maxTextureSize: 2048
@@ -38,101 +40,71 @@ TextureImporter:
     wrapMode: 1
   nPOTScale: 0
   lightmap: 0
+  rGBM: 0
   compressionQuality: 50
   spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
-  spritePivot: {x: 0.5, y: 0.5}
+  spritePivot: {x: .5, y: .5}
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spritePixelsToUnits: 100
-  alphaUsage: 1
   alphaIsTransparency: 1
-  spriteTessellationDetail: -1
   textureType: 8
-  textureShape: 1
-  maxTextureSizeSet: 0
-  compressionQualitySet: 0
-  textureFormatSet: 0
-  platformSettings:
-  - buildTarget: DefaultTexturePlatform
-    maxTextureSize: 2048
-    textureFormat: -1
-    textureCompression: 0
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
+  buildTargetSettings: []
   spriteSheet:
-    serializedVersion: 2
     sprites:
-    - serializedVersion: 2
-      name: t_rex_body
+    - name: t_rex_body
       rect:
         serializedVersion: 2
-        x: 19.518566
-        y: 704.9008
-        width: 786.41473
-        height: 319.09918
+        x: 19.5185661
+        y: 704.900818
+        width: 786.414734
+        height: 319.099182
       alignment: 9
-      pivot: {x: 0.5103738, y: 0.22812499}
+      pivot: {x: .510373771, y: .228124991}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: -1
-    - serializedVersion: 2
-      name: t_rex_leg
+    - name: t_rex_leg
       rect:
         serializedVersion: 2
-        x: 13.741495
-        y: 376.2162
-        width: 146.6198
-        height: 307.31165
+        x: 13.7414951
+        y: 376.216187
+        width: 146.619797
+        height: 307.311646
       alignment: 9
-      pivot: {x: 0.46087265, y: 0.75859475}
+      pivot: {x: .46087265, y: .758594751}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: -1
-    - serializedVersion: 2
-      name: t_rex_head
+    - name: t_rex_head
       rect:
         serializedVersion: 2
         x: 238.13739
-        y: 546.58777
-        width: 179.91223
-        height: 120.64136
+        y: 546.587769
+        width: 179.912231
+        height: 120.641357
       alignment: 9
-      pivot: {x: 0.123487204, y: 0.3012029}
+      pivot: {x: .123487204, y: .301202893}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: -1
-    - serializedVersion: 2
-      name: t_rex_jaw_open_back
+    - name: t_rex_jaw_open_back
       rect:
         serializedVersion: 2
-        x: 681.18085
-        y: 515.5811
+        x: 681.180847
+        y: 515.581116
         width: 116.167725
         height: 120.407166
       alignment: 9
-      pivot: {x: 0.5228305, y: 0.50609076}
+      pivot: {x: .522830486, y: .50609076}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: -1
-    - serializedVersion: 2
-      name: t_rex_jaw_open
+    - name: t_rex_jaw_open
       rect:
         serializedVersion: 2
-        x: 466.24255
-        y: 458.70618
-        width: 189.06268
-        height: 208.96472
+        x: 466.242554
+        y: 458.706177
+        width: 189.062683
+        height: 208.964722
       alignment: 9
-      pivot: {x: 0.49476063, y: 0.49506232}
+      pivot: {x: .494760633, y: .495062321}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: -1
-    outline: []
   spritePackingTag: trex
-  userData: 97656327170699
+  userData: 97018622002239
   assetBundleName: 
   assetBundleVariant: 
